@@ -27,5 +27,27 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         System.out.print("\nEnter int number: ");
         int key = scan.nextInt();
+
+        int low = 0;
+        int high = array.length - 1;
+        int index = -1;
+
+        while (low <= high){
+            int middle = (low + high) / 2;
+            if (array[middle] == key){
+                index = middle;
+                break;
+            } else if (array[middle] < key) {
+                low = middle + 1;
+            }else {
+                high = middle - 1;
+            }
+        }
+        if (index == -1){
+            System.out.println("3) There is no number that you entered");
+        }else {
+            System.out.println("3) Entered number is " + key + "." +
+                    " Its index is " + index + ".");
+        }
     }
 }
