@@ -1,6 +1,7 @@
 package app;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     static int[] array;
@@ -22,5 +23,9 @@ public class Main {
         }
         System.out.println("\n2) Sorted numbers of array:\n" +
                 Arrays.toString(array));
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("\nEnter int number: ");
+        int key = scan.nextInt();
     }
 }
